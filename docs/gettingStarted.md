@@ -3,7 +3,6 @@ layout: default
 title: Getting Started
 order: 2
 ---
-Last updated: {{ site.time | date: "%B %d, %Y" }}
 
 Welcome to aVenture, your comprehensive venture capital research platform. This guide will help you get started with accessing and using our database for startup and investor information.
 
@@ -39,3 +38,7 @@ To export data for your research:
 3. Choose your preferred format (CSV, Excel, etc.)
 
 For more detailed information on using specific features, please refer to our help section.
+
+<div style="text-align: right; font-size: 0.8em; margin-top: 2em;">
+Last updated: {{ site.time | date: "%B %d, %Y" }}
+</div>

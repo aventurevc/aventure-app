@@ -3,7 +3,6 @@ layout: default
 title: Disclaimers
 order: 6
 ---
-Last updated: {{ site.time | date: "%B %d, %Y" }}
 
 The information provided on [aventure.vc](https://aventure.vc) (the "Site") and the aVenture database (the "Service") is for general informational purposes only. All information on the Site and our Service is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site or our Service.
 
@@ -30,3 +29,7 @@ We reserve the right to make changes to these disclaimers at any time and for an
 ## 6. Contact Us
 
 If you have any questions about these Disclaimers, please contact us.
+
+<div style="text-align: right; font-size: 0.8em; margin-top: 2em;">
+Last updated: {{ site.time | date: "%B %d, %Y" }}
+</div>
