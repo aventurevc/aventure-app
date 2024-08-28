@@ -1,151 +1,89 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title | default: site.title }}</title>
-    {% seo %}
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>aVenture Documentation</title>
     <style>
-        :root {
-            --primary-color: #0052cc;
-            --secondary-color: #00a3bf;
-            --accent-color: #ff5630;
-            --text-color: #172b4d;
-            --background-color: #ffffff;
-            --nav-bg-color: #f4f5f7;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --primary-color: #0065ff;
-                --secondary-color: #00b8d9;
-                --accent-color: #ff7452;
-                --text-color: #b3bac5;
-                --background-color: #0d1117;
-                --nav-bg-color: #161b22;
-            }
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
+            color: #333;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-
         header {
-            background-color: var(--nav-bg-color);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 40px;
         }
-
         .logo {
-            max-height: 40px;
-            width: auto;
+            max-width: 300px;
+            height: auto;
         }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
+        h1 {
+            color: #2c3e50;
+            margin-top: 20px;
         }
-
-        nav ul {
+        p {
+            margin-bottom: 20px;
+        }
+        .quick-links {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .quick-links h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .quick-links ul {
             list-style-type: none;
             padding: 0;
-            display: flex;
-            gap: 20px;
         }
-
-        nav ul li a {
-            color: var(--text-color);
+        .quick-links li {
+            margin-bottom: 10px;
+        }
+        .quick-links a {
+            color: #3498db;
             text-decoration: none;
-            font-weight: 500;
             transition: color 0.3s ease;
         }
-
-        nav ul li a:hover {
-            color: var(--primary-color);
+        .quick-links a:hover {
+            color: #2980b9;
         }
-
-        main {
-            padding: 2rem 0;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: var(--primary-color);
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--secondary-color);
-            text-decoration: none;
-        }
-
         footer {
-            background-color: var(--nav-bg-color);
-            color: var(--text-color);
+            margin-top: 40px;
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            color: #7f8c8d;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <a href="{{ '/' | relative_url }}" class="logo">
-                    <img src="{{ site.baseurl }}/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
-                </a>
-                <ul>
-                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                    <li><a href="{{ '/getting-started' | relative_url }}">Getting Started</a></li>
-                    <li><a href="{{ '/data-conventions' | relative_url }}">Data Conventions</a></li>
-                    <li><a href="{{ '/terms-of-use' | relative_url }}">Terms of Use</a></li>
-                    <li><a href="{{ '/privacy-policy' | relative_url }}">Privacy Policy</a></li>
-                    <li><a href="{{ '/legal-disclaimers' | relative_url }}">Legal Disclaimers</a></li>
-                </ul>
-            </nav>
-        </div>
+        <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
+        <h1>aVenture Documentation</h1>
     </header>
 
-    <main class="container">
-        <h1>{{ page.title }}</h1>
-        {{ content }}
+    <main>
+        <p><strong>aVenture</strong> is a private venture capital research platform providing startup and investor data at both personal and firm levels. This documentation provides information on accessing and using the aVenture research database.</p>
+
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="gettingStarted/">Getting Started</a></li>
+                <li><a href="conventions/">Conventions</a></li>
+                <li><a href="terms-of-use/">Terms of Use</a></li>
+                <li><a href="privacy-policy/">Privacy Policy</a></li>
+                <li><a href="legal-disclaimers/">Legal Disclaimers</a></li>
+            </ul>
+        </div>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; {{ site.time | date: '%Y' }} aVenture. All rights reserved.</p>
-        </div>
+        <p>For more information, visit <a href="https://aventure.vc">https://aventure.vc</a></p>
     </footer>
 </body>
 </html>
