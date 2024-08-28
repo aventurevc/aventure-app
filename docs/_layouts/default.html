@@ -5,24 +5,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{{ page.title }} | aVenture</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="https://aventure.vc" title="aVenture">
-                <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_transparent_margin_1280x_wide.png" alt="aVenture Logo" class="logo">
-            </a>
-            <h1>{{ site.title }}</h1>
+            <div class="logo-container">
+                <a href="https://aventure.vc" title="aVenture">
+                    <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
+                </a>
+            </div>
+            <h1>aVenture</h1>
         </div>
-        <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
     </header>
 
     <div class="container">
         <nav class="side-nav">
-            <h2>Quick Links</h2>
+            <h2>Documentation</h2>
             <ul>
                 <li><a href="{{ '/index.html' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
                 <li><a href="{{ '/gettingStarted.html' | relative_url }}" {% if page.url == "/gettingStarted.html" %}class="active"{% endif %}>Getting Started</a></li>
@@ -34,13 +39,14 @@
         </nav>
 
         <main class="content">
+            <h2 class="page-title">{{ page.title }}</h2>
             {{ content }}
             <p class="last-updated">Last updated: 2024-08-27</p>
         </main>
     </div>
 
     <footer>
-        <p>For more information, visit <a href="https://aventure.vc">https://aventure.vc</a></p>
+        <p>© 2024 aVenture. All rights reserved. | <a href="https://aventure.vc">aventure.vc</a></p>
     </footer>
 
     <script>
@@ -50,6 +56,15 @@
         function setTheme(theme) {
             htmlElement.setAttribute('data-theme', theme);
             Cookies.set('theme', theme, { expires: 365 });
+            updateThemeIcon(theme);
+        }
+
+        function updateThemeIcon(theme) {
+            const moonPath = "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z";
+            const sunPath = "M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42";
+
+            const svgElement = themeToggle.querySelector('svg path');
+            svgElement.setAttribute('d', theme === 'light' ? moonPath : sunPath);
         }
 
         themeToggle.addEventListener('click', () => {
