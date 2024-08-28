@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Legal Disclaimers
+title: Disclaimers
+order: 6
 ---
 last_modified_at: {{ page.last_modified_at | date: "%B %d, %Y" }}
 
