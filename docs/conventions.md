@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Conventions
-last_modified_at: August 27, 2024
+last_modified_at: {{ page.last_modified_at | date: "%B %d, %Y" }}
 ---
 Welcome to the aVenture Data Conventions guide. This document outlines the standardized practices and formats used throughout our database. Understanding these conventions will help you navigate, interpret, and utilize the data more effectively in your venture capital research and analysis.
 

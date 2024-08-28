@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Privacy Policy
+last_modified_at: {{ page.last_modified_at | date: "%B %d, %Y" }}
 ---
-Last updated: August 27, 2024
+Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}
 
 aVenture Investment Company ("aVenture", "us", "we", or "our") operates the [aventure.vc](https://aventure.vc) website and the aVenture database (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
 
