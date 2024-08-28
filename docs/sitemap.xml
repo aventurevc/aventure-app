@@ -6,7 +6,7 @@ layout: null
   {% for page in site.pages %}
     {% if page.layout != null and page.layout != 'feed' %}
     <url>
-      <loc>{{ site.url }}{{ page.url }}</loc>
+      <loc>https://docs.aventure.vc{{ page.url }}</loc>
       <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
