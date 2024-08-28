@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Getting Started
+order: 2
 ---
 Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}
 
