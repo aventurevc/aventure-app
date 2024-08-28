@@ -11,7 +11,7 @@
     <meta name="author" content="aVenture Investment Company">
     <meta property="og:title" content="{{ page.title }} | aVenture">
     <meta property="og:description" content="{{ page.description | default: 'aVenture Investment Company - Venture capital research platform providing startup and investor data.' }}">
-    <meta property="og:image" content="{{ '/assets/images/aventure_logo_1280x640_transparent.png' | absolute_url }}">
+    <meta property="og:image" content="https://docs.aventure.vc/assets/images/aventure_logo_1280x640_transparent.png">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="640">
     <meta property="og:url" content="{{ page.url | prepend: 'https://docs.aventure.vc' }}">
@@ -32,7 +32,7 @@
       "@type": "WebPage",
       "name": "{{ page.title }} | aVenture",
       "description": "{{ page.description | default: 'aVenture Investment Company - Venture capital research platform providing startup and investor data.' }}",
-      "url": "{{ page.url | absolute_url }}",
+      "url": "{{ page.url | prepend: 'https://docs.aventure.vc' }}",
       "datePublished": "{{ site.time | date_to_xmlschema }}",
       "dateModified": "{{ site.time | date_to_xmlschema }}",
       "publisher": {
@@ -40,7 +40,7 @@
         "name": "aVenture Investment Company",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ '/assets/images/aventure_logo_1280x640_transparent.png' | absolute_url }}",
+          "url": "https://docs.aventure.vc/assets/images/aventure_logo_1280x640_transparent.png",
           "width": 1280,
           "height": 640
         }
@@ -53,7 +53,7 @@
         <div class="header-content">
             <div class="logo-container">
                 <a href="https://aventure.vc" title="aVenture" target="_blank" rel="noopener noreferrer">
-                    <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
+                    <img src="https://docs.aventure.vc/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
                 </a>
             </div>
             <div class="nav-container">
