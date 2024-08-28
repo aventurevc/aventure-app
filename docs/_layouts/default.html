@@ -1,41 +1,66 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
+    <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
 </head>
 <body>
     <header>
-        <a href="https://aventure.vc" title="aVenture">
-            <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
-        </a>
-        <h1>{{ site.title }}</h1>
+        <div class="header-content">
+            <a href="https://aventure.vc" title="aVenture">
+                <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
+            </a>
+            <h1>{{ site.title }}</h1>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
     </header>
 
     <div class="container">
         <nav class="side-nav">
             <h2>Quick Links</h2>
             <ul>
-                <li><a href="{{ '/index.html' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/getting-started.html' | relative_url }}">Getting Started</a></li>
-                <li><a href="{{ '/conventions.html' | relative_url }}">Conventions</a></li>
-                <li><a href="{{ '/terms-of-use.html' | relative_url }}">Terms of Use</a></li>
-                <li><a href="{{ '/privacy-policy.html' | relative_url }}">Privacy Policy</a></li>
-                <li><a href="{{ '/legal-disclaimers.html' | relative_url }}">Legal Disclaimers</a></li>
+                <li><a href="{{ '/index.html' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+                <li><a href="{{ '/gettingStarted.html' | relative_url }}" {% if page.url == "/gettingStarted.html" %}class="active"{% endif %}>Getting Started</a></li>
+                <li><a href="{{ '/conventions.html' | relative_url }}" {% if page.url == "/conventions.html" %}class="active"{% endif %}>Conventions</a></li>
+                <li><a href="{{ '/terms-of-use.html' | relative_url }}" {% if page.url == "/terms-of-use.html" %}class="active"{% endif %}>Terms of Use</a></li>
+                <li><a href="{{ '/privacy-policy.html' | relative_url }}" {% if page.url == "/privacy-policy.html" %}class="active"{% endif %}>Privacy Policy</a></li>
+                <li><a href="{{ '/legal-disclaimers.html' | relative_url }}" {% if page.url == "/legal-disclaimers.html" %}class="active"{% endif %}>Legal Disclaimers</a></li>
             </ul>
         </nav>
 
         <main class="content">
             {{ content }}
+            <p class="last-updated">Last updated: 2024-08-27</p>
         </main>
     </div>
 
     <footer>
         <p>For more information, visit <a href="https://aventure.vc">https://aventure.vc</a></p>
     </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        function setTheme(theme) {
+            htmlElement.setAttribute('data-theme', theme);
+            Cookies.set('theme', theme, { expires: 365 });
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+
+        // Check for saved theme preference or use default 'light'
+        const savedTheme = Cookies.get('theme') || 'light';
+        setTheme(savedTheme);
+    </script>
 </body>
 </html>
