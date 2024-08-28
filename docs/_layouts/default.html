@@ -29,7 +29,8 @@
                                  (page.url == p.url | remove: 'index.html' | remove: 'index') 
                            %}
                            class="active"
-                           {% endif %}>
+                           {% endif 
+                           %}>
                             {{ p.title }}
                         </a>
                         {% endif %}
