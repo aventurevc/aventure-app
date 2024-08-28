@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     {% seo %}
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0a2342;
-            --secondary-color: #126872;
-            --accent-color: #1e88e5;
-            --text-color: #333333;
+            --primary-color: #0052cc;
+            --secondary-color: #00a3bf;
+            --accent-color: #ff5630;
+            --text-color: #172b4d;
             --background-color: #ffffff;
-            --nav-bg-color: #f5f5f5;
+            --nav-bg-color: #f4f5f7;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --primary-color: #1e88e5;
-                --secondary-color: #126872;
-                --accent-color: #64b5f6;
-                --text-color: #e0e0e0;
-                --background-color: #121212;
-                --nav-bg-color: #1e1e1e;
+                --primary-color: #0065ff;
+                --secondary-color: #00b8d9;
+                --accent-color: #ff7452;
+                --text-color: #b3bac5;
+                --background-color: #0d1117;
+                --nav-bg-color: #161b22;
             }
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
@@ -43,14 +43,13 @@
         }
 
         header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 0;
+            background-color: var(--nav-bg-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .logo {
-            max-width: 200px;
-            height: auto;
+            max-height: 40px;
+            width: auto;
         }
 
         nav {
@@ -68,14 +67,14 @@
         }
 
         nav ul li a {
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
 
         main {
@@ -87,12 +86,27 @@
         }
 
         a {
-            color: var(--accent-color);
+            color: var(--primary-color);
             text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            text-decoration: none;
         }
 
         footer {
@@ -109,7 +123,7 @@
         <div class="container">
             <nav>
                 <a href="{{ '/' | relative_url }}" class="logo">
-                    <img src="{{ '/assets/images/aventure_logo_1280x_wide_reduced_transparent.png' | relative_url }}" alt="aVenture Logo" class="logo">
+                    <img src="{{ site.baseurl }}/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
                 </a>
                 <ul>
                     <li><a href="{{ '/' | relative_url }}">Home</a></li>
