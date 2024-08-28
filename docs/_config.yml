@@ -34,3 +34,6 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+
+# Add this line to help with cache busting
+version: 1.0.0

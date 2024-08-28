@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | aVenture</title>
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
 </head>
@@ -47,7 +47,7 @@
         <main class="content">
             <h1 class="page-title">{{ page.title }}</h1>
             {{ content }}
-            <p class="last-updated">Last updated: 2024-08-27</p>
+            <p class="last-updated">Last updated: August 27, 2024</p>
         </main>
     </div>
 
