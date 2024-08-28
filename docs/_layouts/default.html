@@ -11,11 +11,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     {% include head-custom.html %}
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: 'Roboto', sans-serif;
+      :root {
+        --primary-color: #14213d;
+        --secondary-color: #fca311;
+        --text-color: #333333;
+        --background-color: #ffffff;
+        --nav-bg-color: #f8f9fa;
+        --nav-hover-bg-color: #e9ecef;
       }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-color: #fca311;
+          --secondary-color: #14213d;
+          --text-color: #e0e0e0;
+          --background-color: #121212;
+          --nav-bg-color: #1e1e1e;
+          --nav-hover-bg-color: #2c2c2c;
+        }
+      }
+
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--primary-color);
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: var(--secondary-color);
+      }
+
+      .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        border-bottom: 1px solid var(--primary-color);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
       .logo-container {
         display: flex;
         justify-content: center;
@@ -23,41 +74,64 @@
         margin: 20px 0;
         overflow: hidden;
         border-radius: 10px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: var(--background-color);
       }
+
       .logo-container:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
-      .logo-container:hover {
-        transform: scale(1.05);
-      }
+
       .logo {
         max-width: 100%;
         height: auto;
         display: block;
       }
+
       nav ul {
         list-style-type: none;
         padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
+
       nav ul li {
         margin-bottom: 10px;
+        flex: 1 0 45%;
       }
+
       nav ul li a {
         display: block;
         padding: 10px;
-        background-color: #f0f8ff; /* Light blue background */
+        background-color: var(--nav-bg-color);
         border-radius: 5px;
         text-decoration: none;
-        color: #14213d; /* Dark blue text color */
+        color: var(--text-color);
         transition: all 0.3s ease;
         font-weight: 600;
+        text-align: center;
       }
+
       nav ul li a:hover {
-        background-color: #14213d; /* Dark blue background on hover */
-        color: #ffffff; /* White text on hover */
+        background-color: var(--nav-hover-bg-color);
+        color: var(--primary-color);
+      }
+
+      section {
+        background-color: var(--background-color);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.9em;
+        color: var(--text-color);
       }
     </style>
   </head>
@@ -70,7 +144,7 @@
           <a href="https://aventure.vc" title="aVenture">
             <img
               class="logo"
-              src="/images/logos/aventure_logo_1280x_wide_reduced_transparent.png"
+              src="images/logos/aventure_logo_1280x_wide_reduced_transparent.png"
               alt="aVenture Logo"
             />
           </a>
@@ -112,9 +186,9 @@
       </section>
       <footer>
         {% if site.github.is_project_page %}
-        <p>This is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
-        <p><small></small></p>
+        <p><small>&copy; {{ site.time | date: '%Y' }} aVenture. All rights reserved.</small></p>
       </footer>
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
