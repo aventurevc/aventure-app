@@ -4,24 +4,20 @@
 :root {
     --bg-color: #ffffff;
     --text-color: #333333;
-    --nav-bg-color: #f8f9fa;
-    --nav-text-color: #495057;
     --link-color: #0066cc;
     --link-hover-color: #004499;
     --header-bg-color: #0a192f;
     --header-text-color: #ffffff;
-    --footer-bg-color: #0a192f;
-    --footer-text-color: #ffffff;
+    --footer-bg-color: #ffffff;
+    --footer-text-color: #333333;
     --border-color: #e0e0e0;
     --code-bg-color: #f6f8fa;
-    --accent-color: #61dafb;
+    --accent-color: #f06529;
 }
 
 [data-theme="dark"] {
     --bg-color: #0a192f;
     --text-color: #e0e0e0;
-    --nav-bg-color: #172a45;
-    --nav-text-color: #ffffff;
     --link-color: #61dafb;
     --link-hover-color: #4fa8d5;
     --header-bg-color: #0a192f;
@@ -56,7 +52,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -66,7 +62,7 @@ header {
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 200px;
     height: auto;
     filter: brightness(0) invert(1);
 }
@@ -103,52 +99,11 @@ header {
     transform: rotate(15deg);
 }
 
-.container {
-    display: flex;
-    max-width: 1200px;
+.content {
+    max-width: 800px;
     margin: 2rem auto;
     padding: 0 2rem;
-    gap: 2rem;
-}
-
-.side-nav {
-    width: 250px;
-    background-color: var(--nav-bg-color);
-    border-radius: 8px;
-    padding: 1rem;
-    position: sticky;
-    top: 100px;
-    height: calc(100vh - 140px);
-    overflow-y: auto;
-    transition: background-color 0.3s ease;
-}
-
-.side-nav nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.side-nav a {
-    color: var(--nav-text-color);
-    text-decoration: none;
-    padding: 0.75rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-weight: 500;
-}
-
-.side-nav a:hover, .side-nav a.active {
-    background-color: var(--accent-color);
-    color: var(--header-bg-color);
-}
-
-.content {
-    flex-grow: 1;
     background-color: var(--bg-color);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
@@ -210,10 +165,11 @@ footer {
     background-color: var(--footer-bg-color);
     color: var(--footer-text-color);
     font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
 }
 
 footer a {
-    color: var(--accent-color);
+    color: var(--link-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -254,17 +210,6 @@ blockquote {
     .top-nav {
         margin-top: 1rem;
         flex-wrap: wrap;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    .side-nav {
-        width: 100%;
-        margin-bottom: 1rem;
-        height: auto;
-        position: static;
     }
 
     .content {
