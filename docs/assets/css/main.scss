@@ -69,6 +69,12 @@ header {
     filter: brightness(0) invert(1);
 }
 
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .top-nav {
     display: flex;
     gap: 1.5rem;

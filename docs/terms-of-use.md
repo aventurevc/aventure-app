@@ -3,7 +3,7 @@ layout: default
 title: Terms
 order: 5
 ---
-Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}
+Last updated: {{ site.time | date: "%B %d, %Y" }}
 
 Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the [aventure.vc](https://aventure.vc) website and the aVenture database (the "Service") operated by aVenture ("us", "we", or "our").
 
