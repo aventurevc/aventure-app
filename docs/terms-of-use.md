@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Terms of Use
+title: Terms
 order: 5
-last_modified_at: {{ page.last_modified_at | date: "%B %d, %Y" }}
 ---
 Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}
 
