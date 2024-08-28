@@ -167,7 +167,7 @@ _ReSharper*/
 _TeamCity*
 *.dotCover
 .axoCover/*
-!.axoCover/settings.json
+.axoCover/settings.json
 coverage*.json
 coverage*.xml
 coverage*.info
@@ -274,10 +274,10 @@ MigrationBackup/
 .ionide/
 FodyWeavers.xsd
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
 *.code-workspace
 .history/
 *.cab
@@ -364,3 +364,4 @@ dmypy.json
 .pyre/
 .pytype/
 cython_debug/
+!/docs/_layouts/images/
