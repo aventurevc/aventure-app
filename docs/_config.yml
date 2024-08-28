@@ -1,4 +1,3 @@
-# _config.yml
 title: aVenture Documentation
 description: Documentation for aVenture, a private venture capital research platform
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -24,3 +23,14 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
+
+# Explicitly set permalink style
+permalink: /:title.html
+
+# Default layout for pages
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"

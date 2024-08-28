@@ -6,18 +6,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/main.scss' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
     <header>
-        <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
+        <a href="https://aventure.vc" title="aVenture">
+            <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
+        </a>
         <h1>{{ site.title }}</h1>
     </header>
-    
-    <main>
-        {{ content }}
-    </main>
-    
+
+    <div class="container">
+        <nav class="side-nav">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="{{ '/index.html' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/getting-started.html' | relative_url }}">Getting Started</a></li>
+                <li><a href="{{ '/conventions.html' | relative_url }}">Conventions</a></li>
+                <li><a href="{{ '/terms-of-use.html' | relative_url }}">Terms of Use</a></li>
+                <li><a href="{{ '/privacy-policy.html' | relative_url }}">Privacy Policy</a></li>
+                <li><a href="{{ '/legal-disclaimers.html' | relative_url }}">Legal Disclaimers</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            {{ content }}
+        </main>
+    </div>
+
     <footer>
         <p>For more information, visit <a href="https://aventure.vc">https://aventure.vc</a></p>
     </footer>
