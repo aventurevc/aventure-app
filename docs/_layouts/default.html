@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | aVenture</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
 </head>
 <body>
@@ -18,7 +18,14 @@
                     <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
                 </a>
             </div>
-            <h1>aVenture</h1>
+            <nav class="top-nav">
+                <a href="{{ '/index.html' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+                <a href="{{ '/gettingStarted.html' | relative_url }}" {% if page.url == "/gettingStarted.html" %}class="active"{% endif %}>Getting Started</a>
+                <a href="{{ '/conventions.html' | relative_url }}" {% if page.url == "/conventions.html" %}class="active"{% endif %}>Conventions</a>
+                <a href="{{ '/terms-of-use.html' | relative_url }}" {% if page.url == "/terms-of-use.html" %}class="active"{% endif %}>Terms of Use</a>
+                <a href="{{ '/privacy-policy.html' | relative_url }}" {% if page.url == "/privacy-policy.html" %}class="active"{% endif %}>Privacy Policy</a>
+                <a href="{{ '/legal-disclaimers.html' | relative_url }}" {% if page.url == "/legal-disclaimers.html" %}class="active"{% endif %}>Legal</a>
+            </nav>
         </div>
         <button id="theme-toggle" aria-label="Toggle dark mode">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -26,27 +33,26 @@
     </header>
 
     <div class="container">
-        <nav class="side-nav">
-            <h2>Navigation</h2>
-            <ul>
-                <li><a href="{{ '/index.html' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-                <li><a href="{{ '/gettingStarted.html' | relative_url }}" {% if page.url == "/gettingStarted.html" %}class="active"{% endif %}>Getting Started</a></li>
-                <li><a href="{{ '/conventions.html' | relative_url }}" {% if page.url == "/conventions.html" %}class="active"{% endif %}>Conventions</a></li>
-                <li><a href="{{ '/terms-of-use.html' | relative_url }}" {% if page.url == "/terms-of-use.html" %}class="active"{% endif %}>Terms of Use</a></li>
-                <li><a href="{{ '/privacy-policy.html' | relative_url }}" {% if page.url == "/privacy-policy.html" %}class="active"{% endif %}>Privacy Policy</a></li>
-                <li><a href="{{ '/legal-disclaimers.html' | relative_url }}" {% if page.url == "/legal-disclaimers.html" %}class="active"{% endif %}>Legal Disclaimers</a></li>
-            </ul>
-        </nav>
+        <aside class="side-nav">
+            <nav>
+                <a href="{{ '/index.html' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+                <a href="{{ '/gettingStarted.html' | relative_url }}" {% if page.url == "/gettingStarted.html" %}class="active"{% endif %}>Getting Started</a>
+                <a href="{{ '/conventions.html' | relative_url }}" {% if page.url == "/conventions.html" %}class="active"{% endif %}>Conventions</a>
+                <a href="{{ '/terms-of-use.html' | relative_url }}" {% if page.url == "/terms-of-use.html" %}class="active"{% endif %}>Terms of Use</a>
+                <a href="{{ '/privacy-policy.html' | relative_url }}" {% if page.url == "/privacy-policy.html" %}class="active"{% endif %}>Privacy Policy</a>
+                <a href="{{ '/legal-disclaimers.html' | relative_url }}" {% if page.url == "/legal-disclaimers.html" %}class="active"{% endif %}>Legal Disclaimers</a>
+            </nav>
+        </aside>
 
         <main class="content">
-            <h2 class="page-title">{{ page.title }}</h2>
+            <h1 class="page-title">{{ page.title }}</h1>
             {{ content }}
             <p class="last-updated">Last updated: 2024-08-27</p>
         </main>
     </div>
 
     <footer>
-        <p>© 2024 aVenture Investment Company, 44 Tehama St, San Francisco, CA 94105. All rights reserved. | <a href="https://aventure.vc">aventure.vc</a></p>
+        <p>© 2024 aVenture Investment Company. All rights reserved. | <a href="https://aventure.vc">aventure.vc</a></p>
     </footer>
 
     <script>
