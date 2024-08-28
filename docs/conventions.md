@@ -43,4 +43,4 @@ Example: Technology > Software > Enterprise Software
 - "Last Updated" field shows the most recent data update
 - "Verified" tag indicates manually verified information
 
-For any questions about these conventions, please refer to our [Help](/help) section or contact our support team.
+For any questions about these conventions, please refer to our help section or contact our support team.

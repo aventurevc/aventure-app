@@ -38,4 +38,4 @@ To export data for your research:
 2. Click on the "Export" button
 3. Choose your preferred format (CSV, Excel, etc.)
 
-For more detailed information on using specific features, please refer to our [Help](/help) section.
+For more detailed information on using specific features, please refer to our help section.

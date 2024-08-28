@@ -7,7 +7,7 @@ title: Legal Disclaimers
 
 Last updated: [Current Date]
 
-The information provided on https://aventure.vc (the "Site") and the aVenture database (the "Service") is for general informational purposes only. All information on the Site and our Service is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site or our Service.
+The information provided on [aventure.vc](https://aventure.vc) (the "Site") and the aVenture database (the "Service") is for general informational purposes only. All information on the Site and our Service is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site or our Service.
 
 ## 1. No Professional Advice
 
@@ -23,7 +23,7 @@ While we strive to keep the information up to date and correct, we make no repre
 
 ## 4. Third-Party Links
 
-Our Site and Service may contain links to third-party web sites or services that are not owned or controlled by aVenture. aVenture has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services.
+Our Site and Service may contain links to third-party websites or services that are not owned or controlled by aVenture. aVenture has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services.
 
 ## 5. Changes to Disclaimers
 

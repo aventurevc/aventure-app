@@ -7,7 +7,7 @@ title: Privacy Policy
 
 Last updated: [Current Date]
 
-aVenture ("us", "we", or "our") operates the https://aventure.vc website and the aVenture database (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
+aVenture Investment Company ("aVenture", "us", "we", or "our") operates the [aventure.vc](https://aventure.vc) website and the aVenture database (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
 
 ## 1. Information Collection and Use
 
