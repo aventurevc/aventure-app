@@ -22,7 +22,7 @@
                 {% assign pages = site.pages | sort: 'order' %}
                 {% for p in pages %}
                     {% if p.title %}
-                    <a href="{{ p.url | relative_url }}" {% if page.url == p.url %}class="active"{% endif %}>{{ p.title }}</a>
+                    <a href="{{ p.url | relative_url }}" {% if page.url == p.url or (page.url == '/' and p.url == '/index.html') %}class="active"{% endif %}>{{ p.title }}</a>
                     {% endif %}
                 {% endfor %}
             </nav>
