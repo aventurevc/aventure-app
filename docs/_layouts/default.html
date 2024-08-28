@@ -1,87 +1,23 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aVenture Documentation</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .logo {
-            max-width: 300px;
-            height: auto;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-top: 20px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        .quick-links {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .quick-links h2 {
-            color: #2c3e50;
-            margin-top: 0;
-        }
-        .quick-links ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .quick-links li {
-            margin-bottom: 10px;
-        }
-        .quick-links a {
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .quick-links a:hover {
-            color: #2980b9;
-        }
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            color: #7f8c8d;
-        }
-    </style>
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.scss' | relative_url }}">
 </head>
 <body>
     <header>
         <img src="https://aventurevc.github.io/aventure-app/assets/images/aventure_logo_1280x_wide_reduced_transparent.png" alt="aVenture Logo" class="logo">
-        <h1>aVenture Documentation</h1>
+        <h1>{{ site.title }}</h1>
     </header>
-
+    
     <main>
-        <p><strong>aVenture</strong> is a private venture capital research platform providing startup and investor data at both personal and firm levels. This documentation provides information on accessing and using the aVenture research database.</p>
-
-        <div class="quick-links">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="gettingStarted/">Getting Started</a></li>
-                <li><a href="conventions/">Conventions</a></li>
-                <li><a href="terms-of-use/">Terms of Use</a></li>
-                <li><a href="privacy-policy/">Privacy Policy</a></li>
-                <li><a href="legal-disclaimers/">Legal Disclaimers</a></li>
-            </ul>
-        </div>
+        {{ content }}
     </main>
-
+    
     <footer>
         <p>For more information, visit <a href="https://aventure.vc">https://aventure.vc</a></p>
     </footer>

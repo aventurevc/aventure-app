@@ -1,23 +1,16 @@
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-- jekyll-remote-theme
-
+# _config.yml
 title: aVenture Documentation
-description: Documentation for the aVenture VC research database
-logo: /images/logos/aventure_logo_1280x640_transparent.png
-show_downloads: false
+description: Documentation for aVenture, a private venture capital research platform
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://aventurevc.github.io" # the base hostname & protocol for your site
 
-# Theme-specific settings
+# Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
 
-# GitHub metadata
-github:
-  is_project_page: false
-
-# Exclude files from processing
+# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -26,3 +19,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+# Custom SASS
+sass:
+  sass_dir: _sass
+  style: compressed
