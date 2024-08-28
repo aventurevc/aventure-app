@@ -2,8 +2,8 @@
 layout: default
 title: Getting Started
 order: 2
+last_modified_date: {{ site.time | date: "%B %d, %Y" }}
 ---
-Last updated: {{ site.time | date: "%B %d, %Y" }}
 
 Welcome to aVenture, your comprehensive venture capital research platform. This guide will help you get started with accessing and using our database for startup and investor information.
 
