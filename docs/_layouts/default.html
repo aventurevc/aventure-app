@@ -1,160 +1,137 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
     {% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    {% include head-custom.html %}
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-      :root {
-        --primary-color: #0a2342;
-        --secondary-color: #126872;
-        --accent-color: #1e88e5;
-        --text-color: #333333;
-        --background-color: #ffffff;
-        --nav-bg-color: #f5f5f5;
-        --nav-hover-bg-color: #e0e0e0;
-      }
-
-      @media (prefers-color-scheme: dark) {
         :root {
-          --primary-color: #1e88e5;
-          --secondary-color: #126872;
-          --accent-color: #64b5f6;
-          --text-color: #e0e0e0;
-          --background-color: #121212;
-          --nav-bg-color: #1e1e1e;
-          --nav-hover-bg-color: #2c2c2c;
+            --primary-color: #0a2342;
+            --secondary-color: #126872;
+            --accent-color: #1e88e5;
+            --text-color: #333333;
+            --background-color: #ffffff;
+            --nav-bg-color: #f5f5f5;
         }
-      }
 
-      body {
-        font-family: 'Open Sans', sans-serif;
-        background-color: var(--background-color);
-        color: var(--text-color);
-        line-height: 1.6;
-      }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #1e88e5;
+                --secondary-color: #126872;
+                --accent-color: #64b5f6;
+                --text-color: #e0e0e0;
+                --background-color: #121212;
+                --nav-bg-color: #1e1e1e;
+            }
+        }
 
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Montserrat', sans-serif;
-        color: var(--primary-color);
-      }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
 
-      a {
-        color: var(--accent-color);
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-      a:hover {
-        color: var(--secondary-color);
-      }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+        }
 
-      .wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
 
-      header {
-        border-bottom: 2px solid var(--primary-color);
-        padding-bottom: 20px;
-        margin-bottom: 40px;
-      }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
 
-      .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 40px 0;
-      }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
 
-      .logo {
-        max-width: 300px;
-        height: auto;
-        display: block;
-      }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
 
-      nav ul {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-      }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
 
-      nav ul li a {
-        display: block;
-        padding: 10px 20px;
-        background-color: var(--nav-bg-color);
-        border-radius: 5px;
-        text-decoration: none;
-        color: var(--text-color);
-        transition: all 0.3s ease;
-        font-weight: 600;
-        text-align: center;
-      }
+        main {
+            padding: 2rem 0;
+        }
 
-      nav ul li a:hover {
-        background-color: var(--nav-hover-bg-color);
-        color: var(--accent-color);
-      }
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--primary-color);
+        }
 
-      section {
-        background-color: var(--background-color);
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
 
-      footer {
-        margin-top: 40px;
-        text-align: center;
-        font-size: 0.9em;
-        color: var(--text-color);
-        opacity: 0.8;
-      }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--nav-bg-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
     </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="logo-container">
-          <a href="{{ '/' | relative_url }}" title="aVenture">
-            <img
-              class="logo"
-              src="{{ '/images/logos/aventure_logo_1280x_wide_reduced_transparent.png' | relative_url }}"
-              alt="aVenture Logo"
-            />
-          </a>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="{{ '/' | relative_url }}" class="logo">
+                    <img src="{{ '/assets/images/aventure_logo_1280x_wide_reduced_transparent.png' | relative_url }}" alt="aVenture Logo" class="logo">
+                </a>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li><a href="{{ '/getting-started' | relative_url }}">Getting Started</a></li>
+                    <li><a href="{{ '/data-conventions' | relative_url }}">Data Conventions</a></li>
+                    <li><a href="{{ '/terms-of-use' | relative_url }}">Terms of Use</a></li>
+                    <li><a href="{{ '/privacy-policy' | relative_url }}">Privacy Policy</a></li>
+                    <li><a href="{{ '/legal-disclaimers' | relative_url }}">Legal Disclaimers</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <nav>
-          <ul>
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/getting-started' | relative_url }}">Getting Started</a></li>
-            <li><a href="{{ '/data-conventions' | relative_url }}">Data Conventions</a></li>
-            <li><a href="{{ '/terms-of-use' | relative_url }}">Terms of Use</a></li>
-            <li><a href="{{ '/privacy-policy' | relative_url }}">Privacy Policy</a></li>
-            <li><a href="{{ '/legal-disclaimers' | relative_url }}">Legal Disclaimers</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section>
-        <h1>{{ page.title | default: site.title }}</h1>
+    <main class="container">
+        <h1>{{ page.title }}</h1>
         {{ content }}
-      </section>
-      <footer>
-        <p><small>&copy; {{ site.time | date: '%Y' }} aVenture. All rights reserved.</small></p>
-      </footer>
-    </div>
-  </body>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; {{ site.time | date: '%Y' }} aVenture. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
