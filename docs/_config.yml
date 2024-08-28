@@ -36,4 +36,11 @@ defaults:
       layout: "default"
 
 # Add this line to help with cache busting
-version: 1.0.0
+version: 1.0.1
+
+# Enable caching to improve build times
+incremental: true
+
+# Set a low cache time to refresh content more frequently
+cache:
+  max_age: 600 # 10 minutes in seconds

@@ -19,12 +19,12 @@
                 </a>
             </div>
             <nav class="top-nav">
-                <a href="{{ '/index.html' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
-                <a href="{{ '/gettingStarted.html' | relative_url }}" {% if page.url == "/gettingStarted.html" %}class="active"{% endif %}>Getting Started</a>
-                <a href="{{ '/conventions.html' | relative_url }}" {% if page.url == "/conventions.html" %}class="active"{% endif %}>Conventions</a>
-                <a href="{{ '/terms-of-use.html' | relative_url }}" {% if page.url == "/terms-of-use.html" %}class="active"{% endif %}>Terms of Use</a>
-                <a href="{{ '/privacy-policy.html' | relative_url }}" {% if page.url == "/privacy-policy.html" %}class="active"{% endif %}>Privacy Policy</a>
-                <a href="{{ '/legal-disclaimers.html' | relative_url }}" {% if page.url == "/legal-disclaimers.html" %}class="active"{% endif %}>Legal</a>
+                {% assign pages = site.pages | sort: 'order' %}
+                {% for p in pages %}
+                    {% if p.title %}
+                    <a href="{{ p.url | relative_url }}" {% if page.url == p.url %}class="active"{% endif %}>{{ p.title }}</a>
+                    {% endif %}
+                {% endfor %}
             </nav>
             <button id="theme-toggle" aria-label="Toggle dark mode">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -35,7 +35,7 @@
     <main class="content">
         <h1 class="page-title">{{ page.title }}</h1>
         {{ content }}
-        <p class="last-updated">Last updated: August 27, 2024</p>
+        <p class="last-updated">Last updated: {{ page.last_modified_at | date: '%B %d, %Y' }}</p>
     </main>
 
     <footer>
@@ -48,7 +48,7 @@
 
         function setTheme(theme) {
             htmlElement.setAttribute('data-theme', theme);
-            Cookies.set('theme', theme, { expires: 365 });
+            localStorage.setItem('theme', theme);
             updateThemeIcon(theme);
         }
 
@@ -66,9 +66,28 @@
             setTheme(newTheme);
         });
 
-        // Check for saved theme preference or use default 'light'
-        const savedTheme = Cookies.get('theme') || 'light';
-        setTheme(savedTheme);
+        // Check for system preference
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+        // Function to set theme based on system preference
+        function setThemeBasedOnSystemPreference() {
+            if (prefersDarkScheme.matches) {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        }
+
+        // Check for saved theme preference or use system preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else {
+            setThemeBasedOnSystemPreference();
+        }
+
+        // Listen for changes in system preference
+        prefersDarkScheme.addListener(setThemeBasedOnSystemPreference);
     </script>
 </body>
 </html>
