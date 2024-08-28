@@ -5,7 +5,7 @@ title: Terms of Use
 
 # Terms of Use
 
-Last updated: [Current Date]
+Last updated: August 27, 2024
 
 Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the [aventure.vc](https://aventure.vc) website and the aVenture database (the "Service") operated by aVenture ("us", "we", or "our").
 
