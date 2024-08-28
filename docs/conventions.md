@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Conventions
+title: Data Conventions
 ---
 
 # aVenture Data Conventions
