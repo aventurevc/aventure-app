@@ -4,15 +4,37 @@ description: Documentation for the aVenture VC research database
 logo: /images/logos/aventure_logo_1280x640_transparent.png
 show_downloads: false
 
+# Theme-specific settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 # Navigation
 nav:
   - name: Home
     link: /
   - name: Getting Started
-    link: /getting-started
+    link: /gettingStarted
+  - name: Conventions
+    link: /conventions
   - name: Terms of Use
     link: /terms-of-use
   - name: Privacy Policy
     link: /privacy-policy
   - name: Legal Disclaimers
     link: /legal-disclaimers
+
+# GitHub metadata
+github:
+  is_project_page: false
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
