@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Disclaimers
+title: Legal Disclaimers
 order: 6
+description: Important legal disclaimers regarding the use of aVenture's venture capital research platform and the information provided on our website.
+keywords: aVenture, legal disclaimers, venture capital research, investment risks, information accuracy
 ---
 
 The information provided on [aventure.vc](https://aventure.vc) (the "Site") and the aVenture database (the "Service") is for general informational purposes only. All information on the Site and our Service is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site or our Service.

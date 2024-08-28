@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Privacy
+title: Privacy Policy
 order: 4
+description: aVenture Investment Company's privacy policy regarding the collection, use, and disclosure of personal data when using our Service.
+keywords: aVenture, privacy policy, data protection, personal information, venture capital platform
 ---
 
 aVenture Investment Company ("aVenture", "us", "we", or "our") operates the [aventure.vc](https://aventure.vc) website and the aVenture database (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.

@@ -2,6 +2,8 @@
 layout: default
 title: Getting Started
 order: 2
+description: Learn how to access and use the aVenture database for startup and investor information. A comprehensive guide to navigating our venture capital research platform.
+keywords: aVenture, getting started, venture capital research, startup database, investor data
 ---
 
 Welcome to aVenture, your comprehensive venture capital research platform. This guide will help you get started with accessing and using our database for startup and investor information.

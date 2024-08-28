@@ -2,6 +2,8 @@
 layout: default
 title: Data Conventions
 order: 3
+description: Understand the standardized practices and formats used in the aVenture database. Learn how to interpret and utilize venture capital data effectively.
+keywords: aVenture, data conventions, venture capital data, startup information, investor data formats
 ---
 Welcome to the aVenture Data Conventions guide. This document outlines the standardized practices and formats used throughout our database. Understanding these conventions will help you navigate, interpret, and utilize the data more effectively in your venture capital research and analysis.
 

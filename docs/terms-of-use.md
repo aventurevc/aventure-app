@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Terms
+title: Terms of Use
 order: 5
+description: Terms and conditions for using the aVenture website and database. Understand your rights and responsibilities when accessing our venture capital research platform.
+keywords: aVenture, terms of use, user agreement, venture capital platform, legal terms
 ---
 
 Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the [aventure.vc](https://aventure.vc) website and the aVenture database (the "Service") operated by aVenture ("us", "we", or "our").
