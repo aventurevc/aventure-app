@@ -24,7 +24,7 @@
                     {% for p in pages %}
                         {% if p.title %}
                         <a href="{{ p.url | relative_url }}" 
-                           {% if page.url == p.url or (page.url == p.url | remove: 'index.html' | remove: 'index') %}
+                           {% if page.url == p.url or (page.url == '/' and p.url contains 'index') or (page.url == p.url | remove: 'index.html' | remove: 'index') %}
                            class="active"
                            {% endif %}>
                             {{ p.title }}
