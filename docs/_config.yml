@@ -1,0 +1,22 @@
+theme: jekyll-theme-minimal
+title: aVenture Documentation
+description: Documentation, legal information, and help for the aVenture VC research database
+logo: /images/logos/aventure_logo_1280x640_transparent.png
+show_downloads: false
+
+# Navigation
+nav:
+  - name: Home
+    link: /
+  - name: Getting Started
+    link: /getting-started
+  - name: Conventions
+    link: /conventions
+  - name: Terms of Use
+    link: /terms-of-use
+  - name: Privacy Policy
+    link: /privacy-policy
+  - name: Legal Disclaimers
+    link: /legal-disclaimers
+  - name: Help
+    link: /help
