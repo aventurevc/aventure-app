@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     {% include head-custom.html %}
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
@@ -38,16 +38,17 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
         {% endif %}
-        
-        {% if site.nav %}
+
         <nav>
           <ul>
-          {% for item in site.nav %}
-            <li><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
-          {% endfor %}
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/gettingStarted' | relative_url }}">Getting Started</a></li>
+            <li><a href="{{ '/conventions' | relative_url }}">Conventions</a></li>
+            <li><a href="{{ '/terms-of-use' | relative_url }}">Terms of Use</a></li>
+            <li><a href="{{ '/privacy-policy' | relative_url }}">Privacy Policy</a></li>
+            <li><a href="{{ '/legal-disclaimers' | relative_url }}">Legal Disclaimers</a></li>
           </ul>
         </nav>
-        {% endif %}
       </header>
       <section>
 
@@ -56,11 +57,11 @@
       </section>
       <footer>
         {% if site.github.is_project_page %}
-        <p>This site is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
-        <p><small>Powered by <a href="https://github.com/pages-themes/minimal">Minimal theme</a> for GitHub Pages</small></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
